@@ -10,7 +10,7 @@ body {
     overflow: auto;
 }
 
-nav {
+header {
     width: 100%;
     position: fixed;
     top: 0;
@@ -21,31 +21,31 @@ nav {
     padding: 10px 0;
 }
 
-nav .nav-content {
+.nav-content {
     display: flex;
     align-items: center;
     margin: 0 50px; /* Buffer to appear somewhat centered */
 }
 
-nav .title {
+.title {
     font-size: 24px;
     font-weight: bold;
     color: white;
     margin-right: 50px; /* Space between title and tabs */
 }
 
-nav ul.tabs {
+ul.tabs {
     list-style-type: none;
     padding: 0;
     margin: 0;
     display: flex;
 }
 
-nav ul.tabs li {
+ul.tabs li {
     margin: 0 10px;
 }
 
-nav ul.tabs li a {
+ul.tabs li a {
     text-decoration: none;
     color: white;
     font-size: 18px;
@@ -54,15 +54,16 @@ nav ul.tabs li a {
     transition: color 0.3s;
 }
 
-nav ul.tabs li a:hover {
+ul.tabs li a:hover {
     color: #ffb3ff; /* Color on hover */
 }
 
-nav ul.tabs li a.active {
+ul.tabs li a.active {
     color: #ffb3ff; /* Active tab color */
+    font-weight: bold;
 }
 
-nav ul.tabs li a::after {
+ul.tabs li a::after {
     content: '';
     display: block;
     width: 0;
@@ -74,8 +75,8 @@ nav ul.tabs li a::after {
     bottom: -2px;
 }
 
-nav ul.tabs li a:hover::after,
-nav ul.tabs li a.active::after {
+ul.tabs li a:hover::after,
+ul.tabs li a.active::after {
     width: 100%; /* Animate underline */
 }
 
@@ -105,4 +106,19 @@ nav ul.tabs li a.active::after {
 .placeholder {
     color: #888;
     font-size: 16px;
+}
+
+@media (max-width: 600px) {
+    .nav-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    ul.tabs {
+        flex-direction: column;
+        width: 100%;
+    }
+    .container {
+        width: 90%;
+        margin: 100px auto 0;
+    }
 }

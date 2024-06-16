@@ -3,43 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Matt & Emily's wedding celebration. Join us for a memorable event.">
     <title>Wedding Celebration</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav>
-        <div class="nav-content">
-            <span class="title">Matt & Emily</span>
-            <ul class="tabs">
-                <li><a href="home" onclick="showTab(event, 'home')">Home</a></li>
-                <li><a href="info" onclick="showTab(event, 'info')">Info</a></li>
-                <li><a href="rsvp" onclick="showTab(event, 'rsvp')">RSVP</a></li>
-                <li><a href="schedule" onclick="showTab(event, 'schedule')">Schedule</a></li>
-            </ul>
-        </div>
-    </nav>
-    <div class="container">
+    <header>
+        <nav>
+            <div class="nav-content">
+                <span class="title">Matt & Emily</span>
+                <ul class="tabs">
+                    <li><a href="/home" onclick="showTab(event, 'home')">Home</a></li>
+                    <li><a href="/info" onclick="showTab(event, 'info')">Info</a></li>
+                    <li><a href="/rsvp" onclick="showTab(event, 'rsvp')">RSVP</a></li>
+                    <li><a href="/schedule" onclick="showTab(event, 'schedule')">Schedule</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main class="container">
         <div id="content">
-            <div id="home" class="tab-content">
+            <div id="home" class="tab-content active">
                 <h1>Welcome to Our Wedding Celebration</h1>
                 <img src="your-image-path.jpg" alt="Wedding Graphic" style="max-width: 100%; height: auto;">
             </div>
-            <div id="info" class="tab-content" style="display:none;">
+            <div id="info" class="tab-content">
                 <h2>Local Information</h2>
                 <p class="placeholder">[Local info goes here]</p>
                 <h2>Travel Information</h2>
                 <p class="placeholder">[Travel info goes here]</p>
             </div>
-            <div id="rsvp" class="tab-content" style="display:none;">
+            <div id="rsvp" class="tab-content">
                 <h2>RSVP</h2>
                 <p class="placeholder">Please fill out our <a href="your-google-form-link" target="_blank">RSVP form</a>.</p>
             </div>
-            <div id="schedule" class="tab-content" style="display:none;">
+            <div id="schedule" class="tab-content">
                 <h2>Weekend Schedule</h2>
                 <p class="placeholder">[Schedule details go here]</p>
             </div>
         </div>
-    </div>
+    </main>
     <script src="script.js"></script>
 </body>
 </html>

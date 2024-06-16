@@ -22,36 +22,47 @@ function showTab(event, tabId) {
     }
 
     // Add active class to the selected tab
-    var tabLink = document.querySelector(`nav ul.tabs li a[href="${tabId}"]`);
+    var tabLink = document.querySelector(`nav ul.tabs li a[href="/${tabId}"]`);
     if (tabLink) {
         tabLink.classList.add('active');
     }
 }
 
+function highlightActiveTab() {
+    const path = location.pathname.substring(1) || 'home';
+    const tabs = document.querySelectorAll('nav ul.tabs li a');
+    tabs.forEach(tab => {
+        if (tab.getAttribute('href').substring(1) === path) {
+            tab.classList.add('active');
+        } else {
+            tab.classList.remove('active');
+        }
+    });
+}
+
 // Handle tab clicks
 document.querySelectorAll('nav ul.tabs li a').forEach(function(tab) {
     tab.addEventListener('click', function(event) {
-        var tabId = this.getAttribute('href');
+        const tabId = this.getAttribute('href').substring(1);
         showTab(event, tabId);
-        // Update the URL without reloading the page
-        history.pushState(null, null, tabId);
+        history.pushState(null, null, '/' + tabId);
+        highlightActiveTab();
     });
 });
 
 // Show the home tab when the page is loaded or if the path ends with index.html
 window.onload = function() {
-    var path = location.pathname.substring(1);
-    if (path === '' || path.endsWith('index.html')) {
-        showTab(null, 'home');
-    } else {
-        showTab(null, path);
+    let path = location.pathname.substring(1);
+    if (path === '' || path === 'index.html') {
+        path = 'home';
+        history.replaceState(null, null, '/home');
     }
+    showTab(null, path);
+    highlightActiveTab();
+};
 
-    // Highlight the active tab based on the current URL
-    var tabs = document.querySelectorAll('nav ul.tabs li a');
-    tabs.forEach(function(tab) {
-        if (tab.getAttribute('href') === '/' + path) {
-            tab.classList.add('active');
-        }
-    });
+window.onpopstate = function() {
+    highlightActiveTab();
+    const path = location.pathname.substring(1) || 'home';
+    showTab(null, path);
 };
