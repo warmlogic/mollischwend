@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: linear-gradient(to bottom right, #e0c3fc, #8ec5fc);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    overflow: auto;
+}
+
+nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #6c63ff; /* Solid color for nav bar */
+    z-index: 1000;
+    text-align: left;
+    padding: 10px 0;
+}
+
+nav .nav-content {
+    display: flex;
+    align-items: center;
+    margin: 0 50px; /* Buffer to appear somewhat centered */
+}
+
+nav .title {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    margin-right: 50px; /* Space between title and tabs */
+}
+
+nav ul.tabs {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul.tabs li {
+    margin: 0 10px;
+}
+
+nav ul.tabs li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    position: relative;
+    padding: 5px;
+    transition: color 0.3s;
+}
+
+nav ul.tabs li a:hover {
+    color: #ffb3ff; /* Color on hover */
+}
+
+nav ul.tabs li a.active {
+    color: #ffb3ff; /* Active tab color */
+}
+
+nav ul.tabs li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #ffb3ff; /* Underline color */
+    transition: width 0.3s;
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+}
+
+nav ul.tabs li a:hover::after,
+nav ul.tabs li a.active::after {
+    width: 100%; /* Animate underline */
+}
+
+.container {
+    text-align: center;
+    width: 80%;
+    max-width: 800px;
+    margin: 80px auto 0; /* Adjusted margin for the fixed navbar */
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#content {
+    margin-top: 20px;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.placeholder {
+    color: #888;
+    font-size: 16px;
+}
