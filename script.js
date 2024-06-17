@@ -56,6 +56,13 @@ window.onload = function() {
     if (path === '' || path === 'index.html') {
         path = 'home';
         history.replaceState(null, null, '/home');
+    } else {
+        // Check if redirected from 404.html
+        const query = window.location.search.substring(1);
+        if (query) {
+            path = query;
+            history.replaceState(null, null, '/' + path);
+        }
     }
     showTab(null, path);
     highlightActiveTab();
