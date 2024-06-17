@@ -53,15 +53,8 @@ document.querySelectorAll('nav ul.tabs li a').forEach(function(tab) {
 // Show the correct tab when the page is loaded
 window.onload = function() {
     let path = location.pathname.substring(1);
-    if (path === '' || path === 'index.html') {
+    if (path === '') {
         path = 'home';
-    } else {
-        // Check if redirected from 404.html
-        const queryParams = new URLSearchParams(window.location.search);
-        if (queryParams.has('path')) {
-            path = queryParams.get('path').substring(1);
-            history.replaceState(null, null, path);
-        }
     }
     showTab(null, path);
     highlightActiveTab();
