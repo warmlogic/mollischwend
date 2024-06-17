@@ -96,7 +96,7 @@ ul.tabs li a.active::after {
 }
 
 .tab-content {
-    display: none;
+    display: block; /* Ensure tab content is visible */
 }
 
 .tab-content.active {
