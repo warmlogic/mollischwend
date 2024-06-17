@@ -50,11 +50,18 @@ document.querySelectorAll('nav ul.tabs li a').forEach(function(tab) {
     });
 });
 
-// Show the correct tab when the page is loaded or when the path ends with index.html
+// Show the correct tab when the page is loaded
 window.onload = function() {
     let path = location.pathname.substring(1);
     if (path === '' || path === 'index.html') {
         path = 'home';
+    } else {
+        // Check if redirected from 404.html
+        const query = window.location.search.substring(1);
+        if (query) {
+            path = query;
+            history.replaceState(null, null, '/' + path);
+        }
     }
     showTab(null, path);
     highlightActiveTab();
