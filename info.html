@@ -14,7 +14,7 @@
                 <span class="title">Matt & Emily</span>
                 <ul class="tabs">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="info.html" class="active">Info</a></li>
+                    <li><a href="info.html">Info</a></li>
                     <li><a href="rsvp.html">RSVP</a></li>
                     <li><a href="schedule.html">Schedule</a></li>
                 </ul>
@@ -31,5 +31,13 @@
             </div>
         </div>
     </main>
+    <script>
+        // Highlight the active tab
+        document.querySelectorAll('.tabs a').forEach(link => {
+            if (link.href === window.location.href) {
+                link.classList.add('active');
+            }
+        });
+    </script>
 </body>
 </html>
