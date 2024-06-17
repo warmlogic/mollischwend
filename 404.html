@@ -5,13 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page Not Found</title>
     <script>
-        // Redirect to index.html to handle client-side routing
-        var redirectPath = window.location.pathname + window.location.search + window.location.hash;
-        window.location.replace('/index.html');
+        // Map clean URLs to their corresponding HTML files
+        const redirectMap = {
+            '/schedule': '/schedule.html',
+            '/info': '/info.html',
+            '/rsvp': '/rsvp.html',
+            '/home': '/home.html',
+            '/': '/home.html', // Redirect root to home.html
+        };
+
+        // Get the current path
+        const currentPath = window.location.pathname;
+
+        // Redirect if the path is in the map
+        if (redirectMap[currentPath]) {
+            window.location.replace(redirectMap[currentPath]);
+        } else {
+            // If the path is not in the map, show a not found message
+            document.write('<h1>Page Not Found</h1><p>Redirecting...</p>');
+            setTimeout(() => {
+                window.location.replace('/home.html');
+            }, 3000);
+        }
     </script>
 </head>
 <body>
-    <h1>Page Not Found</h1>
-    <p>Redirecting...</p>
 </body>
 </html>

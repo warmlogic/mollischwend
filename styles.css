@@ -107,18 +107,3 @@ ul.tabs li a.active::after {
     color: #888;
     font-size: 16px;
 }
-
-@media (max-width: 600px) {
-    .nav-content {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    ul.tabs {
-        flex-direction: column;
-        width: 100%;
-    }
-    .container {
-        width: 90%;
-        margin: 100px auto 0;
-    }
-}
