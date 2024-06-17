@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page Not Found</title>
     <script>
-        // Redirect to index.html while preserving the path
-        var redirectPath = window.location.pathname;
-        window.location.replace('/index.html?path=' + redirectPath);
+        // Redirect to index.html to handle client-side routing
+        var redirectPath = window.location.pathname + window.location.search + window.location.hash;
+        window.location.replace('/index.html');
     </script>
 </head>
 <body>
