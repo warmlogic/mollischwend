@@ -29,7 +29,7 @@ function showTab(event, tabId) {
 }
 
 function highlightActiveTab() {
-    const path = location.hash.substring(1) || 'home';
+    const path = location.pathname.substring(1) || 'home';
     const tabs = document.querySelectorAll('nav ul.tabs li a');
     tabs.forEach(tab => {
         if (tab.getAttribute('href').substring(1) === path) {
@@ -52,9 +52,16 @@ document.querySelectorAll('nav ul.tabs li a').forEach(function(tab) {
 
 // Show the correct tab when the page is loaded
 window.onload = function() {
-    let path = location.hash.substring(1);
-    if (path === '') {
+    let path = location.pathname.substring(1);
+    if (path === '' || path === 'index.html') {
         path = 'home';
+    } else {
+        // Check if redirected from 404.html
+        const queryParams = new URLSearchParams(window.location.search);
+        if (queryParams.has('path')) {
+            path = queryParams.get('path').substring(1);
+            history.replaceState(null, null, path);
+        }
     }
     showTab(null, path);
     highlightActiveTab();
@@ -62,7 +69,7 @@ window.onload = function() {
 
 // Handle back/forward navigation
 window.onpopstate = function() {
-    const path = location.hash.substring(1) || 'home';
+    const path = location.pathname.substring(1) || 'home';
     showTab(null, path);
     highlightActiveTab();
 };

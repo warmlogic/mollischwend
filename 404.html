@@ -6,9 +6,9 @@
     <title>Page Not Found</title>
     <script>
         // Capture the original path
-        var redirectPath = window.location.pathname;
-        // Redirect to index.html with the original path as a hash
-        window.location.replace('/index.html#' + redirectPath);
+        var redirectPath = window.location.pathname + window.location.search + window.location.hash;
+        // Redirect to index.html with the original path as a query parameter
+        window.location.replace('/index.html?path=' + encodeURIComponent(redirectPath));
     </script>
 </head>
 <body>
