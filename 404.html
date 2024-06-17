@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page Not Found</title>
     <script>
-        // Redirect to index.html for client-side routing
+        // Capture the original path
         var redirectPath = window.location.pathname;
-        window.location.replace('/?' + redirectPath);
+        // Redirect to index.html with the original path as a hash
+        window.location.replace('/index.html#' + redirectPath);
     </script>
 </head>
 <body>
