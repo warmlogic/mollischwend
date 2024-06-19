@@ -6,8 +6,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    height: 100vh;
+    min-height: 100vh; /* Ensure body takes full height */
     overflow: auto;
+    padding-bottom: 5vh; /* Add padding to the bottom */
 }
 
 header {
@@ -84,7 +85,7 @@ ul.tabs li a.active::after {
     text-align: left;
     width: 80%;
     max-width: 800px;
-    margin: 10vh 5vw; /* Dynamic margin */
+    margin: 10vh 5vw 0; /* Top margin, dynamic side margins */
     padding: 2vh 3vw; /* Dynamic padding */
     background: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
