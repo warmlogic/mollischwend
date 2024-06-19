@@ -10,8 +10,8 @@
             '/schedule': '/schedule.html',
             '/info': '/info.html',
             '/rsvp': '/rsvp.html',
-            '/home': '/home.html',
-            '/': '/home.html', // Redirect root to home.html
+            '/home': '/index.html',
+            '/': '/index.html', // Redirect root to index.html
         };
 
         // Get the current path
@@ -24,7 +24,7 @@
             // If the path is not in the map, show a not found message
             document.write('<h1>Page Not Found</h1><p>Redirecting...</p>');
             setTimeout(() => {
-                window.location.replace('/home.html');
+                window.location.replace('/index.html');
             }, 3000);
         }
     </script>
