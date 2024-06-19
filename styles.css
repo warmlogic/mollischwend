@@ -24,14 +24,14 @@ header {
 .nav-content {
     display: flex;
     align-items: center;
-    margin: 0 50px; /* Buffer to appear somewhat centered */
+    margin: 0 5vw; /* Dynamic margin */
 }
 
 .title {
-    font-size: 24px;
+    font-size: 1.5em; /* Dynamic font size */
     font-weight: bold;
     color: white;
-    margin-right: 50px; /* Space between title and tabs */
+    margin-right: 3vw; /* Dynamic margin */
 }
 
 ul.tabs {
@@ -42,13 +42,13 @@ ul.tabs {
 }
 
 ul.tabs li {
-    margin: 0 10px;
+    margin: 0 1vw; /* Dynamic margin */
 }
 
 ul.tabs li a {
     text-decoration: none;
     color: white;
-    font-size: 18px;
+    font-size: 1.2em; /* Dynamic font size */
     position: relative;
     padding: 5px;
     transition: color 0.3s;
@@ -84,15 +84,15 @@ ul.tabs li a.active::after {
     text-align: left;
     width: 80%;
     max-width: 800px;
-    margin: 80px 300px 0;
-    padding: 20px;
+    margin: 10vh 5vw; /* Dynamic margin */
+    padding: 2vh 3vw; /* Dynamic padding */
     background: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 #content {
-    margin: 20px 20px;
+    margin: 2vh 3vw; /* Dynamic margin */
 }
 
 #heading {
@@ -109,53 +109,28 @@ ul.tabs li a.active::after {
 
 .date {
     color: #888;
-    font-size: 16px;
+    font-size: 1em; /* Dynamic font size */
     font-weight: bold;
 }
 
 .info-heading {
     color: #000000;
-    font-size: 16px;
+    font-size: 1em; /* Dynamic font size */
     font-style: italic;
     /* font-weight: bold; */
 }
 
 .info {
     color: #000000;
-    font-size: 16px;
+    font-size: 1em; /* Dynamic font size */
 }
 
 .description {
     color: #000000;
-    font-size: 14px;
+    font-size: 0.9em; /* Dynamic font size */
 }
 
 .address {
     color: #888;
-    font-size: 14px;
-}
-
-@media (max-width: 768px) {
-    .container {
-        width: 90%;
-        margin: 80px 10px 0;
-        padding: 10px;
-    }
-
-    .nav-content {
-        margin: 0 10px;
-    }
-
-    ul.tabs {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    ul.tabs li {
-        margin: 5px 0;
-    }
-
-    ul.tabs li a {
-        font-size: 16px;
-    }
+    font-size: 0.9em; /* Dynamic font size */
 }
