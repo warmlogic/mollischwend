@@ -107,19 +107,30 @@ ul.tabs li a.active::after {
     display: block;
 }
 
-.placeholder {
+.date {
     color: #888;
     font-size: 16px;
+    font-weight: bold;
 }
 
-.information-heading {
+.info-heading {
     color: #000000;
     font-size: 16px;
     font-style: italic;
     /* font-weight: bold; */
 }
 
-.information {
+.info {
     color: #000000;
     font-size: 16px;
+}
+
+.description {
+    color: #000000;
+    font-size: 14px;
+}
+
+.address {
+    color: #888;
+    font-size: 14px;
 }
