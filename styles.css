@@ -84,7 +84,7 @@ ul.tabs li a.active::after {
     text-align: left;
     width: 80%;
     max-width: 800px;
-    margin: 80px 250px 0;
+    margin: 80px 300px 0;
     padding: 20px;
     background: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
