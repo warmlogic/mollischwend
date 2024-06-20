@@ -86,31 +86,33 @@ ul.tabs li a.active::after {
     max-width: 800px;
     margin: 10vh 5vw 0; /* Top margin, dynamic side margins */
     padding: 2vh 3vw; /* Dynamic padding */
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.6); /* More transparent */
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-#content {
-    margin: 2vh 5vw 3vh; /* Dynamic margin */
+.card {
+    background: white;
+    padding: 10px 20px; /* Reduced padding */
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-#heading {
-    text-align: center;
+.styled-list {
+    list-style: none;
+    padding: 0;
 }
 
-.tab-content {
-    display: block; /* Ensure tab content is visible */
+.styled-list li {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
 }
 
-.tab-content.active {
-    display: block;
-}
-
-.date {
-    color: #888;
-    font-size: 1em; /* Dynamic font size */
-    font-weight: bold;
+.styled-list li span {
+    margin-right: 10px;
+    font-size: 1.2em;
 }
 
 .info-heading {
