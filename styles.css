@@ -1,5 +1,26 @@
+@font-face {
+    font-family: 'Glacial Indifference';
+    src: url('fonts/GlacialIndifference-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Glacial Indifference';
+    src: url('fonts/GlacialIndifference-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Glacial Indifference';
+    src: url('fonts/GlacialIndifference-Italic.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Glacial Indifference', Arial, sans-serif;
     margin: 0;
     background: linear-gradient(to bottom right, #e0c3fc, #8ec5fc);
     color: #333;
@@ -9,7 +30,6 @@ body {
     min-height: 100vh; /* Ensure body takes full height */
     overflow: auto;
 }
-
 header {
     width: 100%;
     position: fixed;
