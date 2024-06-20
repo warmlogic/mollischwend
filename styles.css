@@ -163,12 +163,6 @@ main {
     font-style: italic;
 }
 
-.date {
-    color: #000000;
-    font-size: 1em; /* Dynamic font size */
-    font-weight: bold;
-}
-
 .what {
     color: #000000;
     font-size: 1em; /* Dynamic font size */
