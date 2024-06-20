@@ -30,6 +30,7 @@ body {
     min-height: 100vh; /* Ensure body takes full height */
     overflow: auto;
 }
+
 header {
     width: 100%;
     position: fixed;
