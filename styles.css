@@ -92,7 +92,7 @@ ul.tabs li a.active::after {
 }
 
 #content {
-    margin: 2vh 3vw 3vh; /* Dynamic margin */
+    margin: 2vh 5vw 3vh; /* Dynamic margin */
 }
 
 #heading {
