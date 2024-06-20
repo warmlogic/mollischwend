@@ -8,7 +8,6 @@ body {
     align-items: flex-start;
     min-height: 100vh; /* Ensure body takes full height */
     overflow: auto;
-    padding-bottom: 5vh; /* Add padding to the bottom */
 }
 
 header {
@@ -93,7 +92,7 @@ ul.tabs li a.active::after {
 }
 
 #content {
-    margin: 2vh 3vw; /* Dynamic margin */
+    margin: 2vh 3vw 3vh; /* Dynamic margin */
 }
 
 #heading {
@@ -118,7 +117,6 @@ ul.tabs li a.active::after {
     color: #000000;
     font-size: 1em; /* Dynamic font size */
     font-style: italic;
-    /* font-weight: bold; */
 }
 
 .info {
