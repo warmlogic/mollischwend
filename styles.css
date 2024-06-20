@@ -93,7 +93,7 @@ ul.tabs li a.active::after {
 
 .card {
     background: white;
-    padding: 10px 20px; /* Reduced padding */
+    padding: 1px 20px;
     margin-bottom: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -119,6 +119,12 @@ ul.tabs li a.active::after {
     color: #000000;
     font-size: 1em; /* Dynamic font size */
     font-style: italic;
+}
+
+.date {
+    color: #000000;
+    font-size: 1em; /* Dynamic font size */
+    font-weight: bold;
 }
 
 .info {
