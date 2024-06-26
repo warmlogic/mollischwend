@@ -178,6 +178,16 @@ main {
     font-size: 1em; /* Dynamic font size */
 }
 
+p.address a {
+    color: #888;
+    /* text-decoration: none; */
+}
+
+p.address a:hover {
+    color: #333;
+    /* text-decoration: underline; */
+}
+
 div.address a {
     color: #888;
     /* text-decoration: none; */
