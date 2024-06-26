@@ -154,7 +154,7 @@ main {
 
 .styled-list li span {
     margin-right: 10px;
-    font-size: 1.2em;
+    font-size: 1em;
 }
 
 .info-heading {
@@ -170,10 +170,10 @@ main {
 
 .description {
     color: #000000;
-    font-size: 0.9em; /* Dynamic font size */
+    font-size: 1em; /* Dynamic font size */
 }
 
 .address {
     color: #888;
-    font-size: 0.9em; /* Dynamic font size */
+    font-size: 1em; /* Dynamic font size */
 }
